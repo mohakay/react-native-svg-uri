@@ -246,6 +246,12 @@ class SvgUri extends Component{
       }, {});
     Object.assign(componentAtts, styleAtts);
 
+    // Originally suggested by https://github.com/colinramsay
+    // https://github.com/matc4/react-native-svg-uri/issues/63
+    if(this.props.fill){
+      componentAtts.fill = this.props.fill;
+    }
+
     return componentAtts;
   }
 
